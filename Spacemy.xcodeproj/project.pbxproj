@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0108BB5323FC506500DAF5D9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5223FC506500DAF5D9 /* Models.swift */; };
-		0108BB5623FC50AD00DAF5D9 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5523FC50AD00DAF5D9 /* AuthController.swift */; };
+		0108BB5323FC506500DAF5D9 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5223FC506500DAF5D9 /* Structs.swift */; };
+		0108BB5623FC50AD00DAF5D9 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5523FC50AD00DAF5D9 /* AuthModel.swift */; };
 		0108BB5823FC7BC700DAF5D9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5723FC7BC700DAF5D9 /* Login.swift */; };
+		0108BB5C23FD451C00DAF5D9 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5B23FD451C00DAF5D9 /* Home.swift */; };
+		0108BB5E23FD467C00DAF5D9 /* Join.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5D23FD467C00DAF5D9 /* Join.swift */; };
+		0108BB6023FD469700DAF5D9 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5F23FD469700DAF5D9 /* Host.swift */; };
+		0108BB6223FD46CD00DAF5D9 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB6123FD46CD00DAF5D9 /* EventsModel.swift */; };
+		0108BB6423FD540900DAF5D9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB6323FD540900DAF5D9 /* Extensions.swift */; };
+		0108BB6623FD55B000DAF5D9 /* EventDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB6523FD55B000DAF5D9 /* EventDetails.swift */; };
+		0108BB6823FD89FB00DAF5D9 /* CollabsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB6723FD89FB00DAF5D9 /* CollabsModel.swift */; };
 		01828DB023F1A01A00AB6925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01828DAF23F1A01A00AB6925 /* AppDelegate.swift */; };
 		01828DB223F1A01A00AB6925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01828DB123F1A01A00AB6925 /* SceneDelegate.swift */; };
 		01828DB523F1A01A00AB6925 /* Spacemy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01828DB323F1A01A00AB6925 /* Spacemy.xcdatamodeld */; };
@@ -17,12 +24,20 @@
 		01828DB923F1A01B00AB6925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01828DB823F1A01B00AB6925 /* Assets.xcassets */; };
 		01828DBC23F1A01B00AB6925 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01828DBB23F1A01B00AB6925 /* Preview Assets.xcassets */; };
 		01828DBF23F1A01B00AB6925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01828DBD23F1A01B00AB6925 /* LaunchScreen.storyboard */; };
+		01F00AE923FDD4D400FB1EDE /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F00AE823FDD4D400FB1EDE /* Register.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0108BB5223FC506500DAF5D9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
-		0108BB5523FC50AD00DAF5D9 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		0108BB5223FC506500DAF5D9 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
+		0108BB5523FC50AD00DAF5D9 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		0108BB5723FC7BC700DAF5D9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		0108BB5B23FD451C00DAF5D9 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		0108BB5D23FD467C00DAF5D9 /* Join.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Join.swift; sourceTree = "<group>"; };
+		0108BB5F23FD469700DAF5D9 /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		0108BB6123FD46CD00DAF5D9 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		0108BB6323FD540900DAF5D9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0108BB6523FD55B000DAF5D9 /* EventDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetails.swift; sourceTree = "<group>"; };
+		0108BB6723FD89FB00DAF5D9 /* CollabsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabsModel.swift; sourceTree = "<group>"; };
 		01828DAC23F1A01A00AB6925 /* Spacemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spacemy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01828DAF23F1A01A00AB6925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01828DB123F1A01A00AB6925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +47,7 @@
 		01828DBB23F1A01B00AB6925 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		01828DBE23F1A01B00AB6925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01828DC023F1A01B00AB6925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01F00AE823FDD4D400FB1EDE /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,17 +64,12 @@
 		0108BB5123FC505500DAF5D9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				0108BB5223FC506500DAF5D9 /* Models.swift */,
+				0108BB5223FC506500DAF5D9 /* Structs.swift */,
+				0108BB5523FC50AD00DAF5D9 /* AuthModel.swift */,
+				0108BB6123FD46CD00DAF5D9 /* EventsModel.swift */,
+				0108BB6723FD89FB00DAF5D9 /* CollabsModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		0108BB5423FC50A400DAF5D9 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				0108BB5523FC50AD00DAF5D9 /* AuthController.swift */,
-			);
-			path = Controllers;
 			sourceTree = "<group>";
 		};
 		01828DA323F1A01A00AB6925 = {
@@ -80,17 +91,22 @@
 		01828DAE23F1A01A00AB6925 /* Spacemy */ = {
 			isa = PBXGroup;
 			children = (
-				0108BB5423FC50A400DAF5D9 /* Controllers */,
 				0108BB5123FC505500DAF5D9 /* Models */,
 				01828DAF23F1A01A00AB6925 /* AppDelegate.swift */,
 				01828DB123F1A01A00AB6925 /* SceneDelegate.swift */,
 				01828DB623F1A01A00AB6925 /* ContentView.swift */,
+				01F00AE823FDD4D400FB1EDE /* Register.swift */,
 				0108BB5723FC7BC700DAF5D9 /* Login.swift */,
+				0108BB5B23FD451C00DAF5D9 /* Home.swift */,
+				0108BB5D23FD467C00DAF5D9 /* Join.swift */,
+				0108BB5F23FD469700DAF5D9 /* Host.swift */,
+				0108BB6523FD55B000DAF5D9 /* EventDetails.swift */,
 				01828DB823F1A01B00AB6925 /* Assets.xcassets */,
 				01828DBD23F1A01B00AB6925 /* LaunchScreen.storyboard */,
 				01828DC023F1A01B00AB6925 /* Info.plist */,
 				01828DB323F1A01A00AB6925 /* Spacemy.xcdatamodeld */,
 				01828DBA23F1A01B00AB6925 /* Preview Content */,
+				0108BB6323FD540900DAF5D9 /* Extensions.swift */,
 			);
 			path = Spacemy;
 			sourceTree = "<group>";
@@ -175,12 +191,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0108BB5823FC7BC700DAF5D9 /* Login.swift in Sources */,
+				0108BB6023FD469700DAF5D9 /* Host.swift in Sources */,
 				01828DB023F1A01A00AB6925 /* AppDelegate.swift in Sources */,
-				0108BB5623FC50AD00DAF5D9 /* AuthController.swift in Sources */,
+				0108BB5623FC50AD00DAF5D9 /* AuthModel.swift in Sources */,
 				01828DB223F1A01A00AB6925 /* SceneDelegate.swift in Sources */,
+				0108BB6223FD46CD00DAF5D9 /* EventsModel.swift in Sources */,
+				0108BB6823FD89FB00DAF5D9 /* CollabsModel.swift in Sources */,
 				01828DB723F1A01A00AB6925 /* ContentView.swift in Sources */,
+				0108BB6423FD540900DAF5D9 /* Extensions.swift in Sources */,
+				01F00AE923FDD4D400FB1EDE /* Register.swift in Sources */,
+				0108BB6623FD55B000DAF5D9 /* EventDetails.swift in Sources */,
+				0108BB5E23FD467C00DAF5D9 /* Join.swift in Sources */,
 				01828DB523F1A01A00AB6925 /* Spacemy.xcdatamodeld in Sources */,
-				0108BB5323FC506500DAF5D9 /* Models.swift in Sources */,
+				0108BB5C23FD451C00DAF5D9 /* Home.swift in Sources */,
+				0108BB5323FC506500DAF5D9 /* Structs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

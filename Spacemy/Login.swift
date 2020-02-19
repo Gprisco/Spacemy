@@ -12,43 +12,62 @@ struct Login: View {
     @State var regNumber: String = ""
     @State var password: String = ""
     
-    @ObservedObject var authController = AuthController()
+    @ObservedObject var authController = AuthModel()
+    @Binding var authToken: String
+    
+    @State var register = false
     
     var body: some View {
         NavigationView {
-            VStack {
-                Section(header: Text("Reg. number").font(.callout)) {
-                    TextField("Reg. Number", text: $regNumber)
-                }
-                .padding(.horizontal)
-                
-                Section(header: Text("Password").font(.callout)) {
-                    SecureField("Password", text: $password)
-                }
-                .padding(.horizontal)
-                
-                Button(action: {
-                    self.authController.login(regNumber: Int(self.regNumber)!, password: self.password)
+            if !register {
+                VStack {
+                    Form {
+                        Section {
+                            TextField("Reg. Number", text: $regNumber)
+                        }
+                        .padding(.horizontal)
+                        
+                        Section {
+                            SecureField("Password", text: $password)
+                        }
+                        .padding(.horizontal)
+                    }
                     
-                    UserDefaults().set(self.authController.authToken, forKey: "authToken")
+                    Button(action: {
+                        self.authController.login(regNumber: Int(self.regNumber)!, password: self.password)
+                        
+                        UserDefaults().set(self.authController.authToken, forKey: "authToken")
+                        
+                        self.authToken = self.authController.authToken
+                    }) {
+                        Text("Sign In")
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 15)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .font(.title)
+                            .cornerRadius(10.0)
+                    }
                     
-                    print(self.authController.authToken)
-                }) {
-                    Text("Sign In")
+                    Spacer()
+                    
+                    HStack {
+                        Text("Don't have an account?")
+                        
+                        Button(action: {
+                            self.register.toggle()
+                        }) {
+                            Text("Sign up")
+                        }
+                    }
+                    
+                    Spacer()
                 }
-                
-                Text(self.authController.authToken)
-                
-                Spacer()
+                .navigationBarTitle("Login")
+                .padding(.top, 50)
+            } else {
+                Register(regNumber: self.$regNumber, password: self.$password, authController: self.authController, register: self.$register)
             }
-            .navigationBarTitle("Login")
-            .padding(.top, 50)
         }
-    }
-}
-
-struct Login_Previews: PreviewProvider {
-    static var previews: some View {
-        Login()
     }
 }

@@ -13,22 +13,29 @@ struct LoginRequest: Encodable {
     var password: String
 }
 
-final class AuthController: ObservableObject {
-    let eventEndpoint = "https://spacemy.herokuapp.com/events"
+final class AuthModel: ObservableObject {
     let loginEndpoint = "https://spacemy.herokuapp.com/login"
-    
-    var events = Events()
+    let registerEndpoint = "https://spacemy.herokuapp.com/register"
+
     @Published var authToken: String = ""
 
     func login(regNumber: Int, password: String) {
-        self.performLoginRequest(identifier: regNumber, password: password, with: self.loginEndpoint, completion: { tokenData in
+        self.performRequest(identifier: regNumber, password: password, with: self.loginEndpoint, completion: { tokenData in
             DispatchQueue.main.sync {
                 self.authToken = String(data: tokenData, encoding: .utf8)!
             }
         })
     }
     
-    func performLoginRequest(identifier: Int, password: String, with urlString: String, completion: @escaping (Data) -> Void) {
+    func register(regNumber: Int, password: String) {
+        self.performRequest(identifier: regNumber, password: password, with: self.registerEndpoint, completion: { response in
+            DispatchQueue.main.async {
+                //print(response)
+            }
+        })
+    }
+
+    func performRequest(identifier: Int, password: String, with urlString: String, completion: @escaping (Data) -> Void) {
         if let url = URL(string: urlString) {
             var request = URLRequest(url: url)
             
@@ -59,37 +66,5 @@ final class AuthController: ObservableObject {
                 fatalError(error.localizedDescription)
             }
         }
-    }
-    
-    func performRequest(with urlString: String, completion: @escaping (Events) -> Void) {
-        if let url = URL(string: urlString) {
-            let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url) { (data, response, error) in
-                if error != nil {
-                    print(error!)
-                    return
-                }
-                if let safeData = data {
-                    completion(self.parseJSON(safeData))
-                }
-            }
-            task.resume()
-        }
-    }
-    
-    func parseJSON(_ eventsData: Data) -> Events {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .iso8601
-        
-        var decodedEventsData: Events?
-        
-        do {
-            decodedEventsData = try decoder.decode(Events.self, from: eventsData)
-        } catch {
-            fatalError(error.localizedDescription)
-        }
-        
-        return decodedEventsData!
-        
     }
 }
