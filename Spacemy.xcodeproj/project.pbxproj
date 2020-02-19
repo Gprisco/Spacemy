@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0108BB5323FC506500DAF5D9 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5223FC506500DAF5D9 /* Models.swift */; };
+		0108BB5623FC50AD00DAF5D9 /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5523FC50AD00DAF5D9 /* AuthController.swift */; };
+		0108BB5823FC7BC700DAF5D9 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0108BB5723FC7BC700DAF5D9 /* Login.swift */; };
 		01828DB023F1A01A00AB6925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01828DAF23F1A01A00AB6925 /* AppDelegate.swift */; };
 		01828DB223F1A01A00AB6925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01828DB123F1A01A00AB6925 /* SceneDelegate.swift */; };
 		01828DB523F1A01A00AB6925 /* Spacemy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 01828DB323F1A01A00AB6925 /* Spacemy.xcdatamodeld */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0108BB5223FC506500DAF5D9 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		0108BB5523FC50AD00DAF5D9 /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		0108BB5723FC7BC700DAF5D9 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		01828DAC23F1A01A00AB6925 /* Spacemy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spacemy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01828DAF23F1A01A00AB6925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01828DB123F1A01A00AB6925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0108BB5123FC505500DAF5D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0108BB5223FC506500DAF5D9 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0108BB5423FC50A400DAF5D9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0108BB5523FC50AD00DAF5D9 /* AuthController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		01828DA323F1A01A00AB6925 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +80,12 @@
 		01828DAE23F1A01A00AB6925 /* Spacemy */ = {
 			isa = PBXGroup;
 			children = (
+				0108BB5423FC50A400DAF5D9 /* Controllers */,
+				0108BB5123FC505500DAF5D9 /* Models */,
 				01828DAF23F1A01A00AB6925 /* AppDelegate.swift */,
 				01828DB123F1A01A00AB6925 /* SceneDelegate.swift */,
 				01828DB623F1A01A00AB6925 /* ContentView.swift */,
+				0108BB5723FC7BC700DAF5D9 /* Login.swift */,
 				01828DB823F1A01B00AB6925 /* Assets.xcassets */,
 				01828DBD23F1A01B00AB6925 /* LaunchScreen.storyboard */,
 				01828DC023F1A01B00AB6925 /* Info.plist */,
@@ -149,10 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0108BB5823FC7BC700DAF5D9 /* Login.swift in Sources */,
 				01828DB023F1A01A00AB6925 /* AppDelegate.swift in Sources */,
+				0108BB5623FC50AD00DAF5D9 /* AuthController.swift in Sources */,
 				01828DB223F1A01A00AB6925 /* SceneDelegate.swift in Sources */,
 				01828DB723F1A01A00AB6925 /* ContentView.swift in Sources */,
 				01828DB523F1A01A00AB6925 /* Spacemy.xcdatamodeld in Sources */,
+				0108BB5323FC506500DAF5D9 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
