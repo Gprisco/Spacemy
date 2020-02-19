@@ -16,9 +16,10 @@ struct LoginRequest: Encodable {
 final class AuthModel: ObservableObject {
     let loginEndpoint = "https://spacemy.herokuapp.com/login"
     let registerEndpoint = "https://spacemy.herokuapp.com/register"
-
+    let logoutEndpoint = "https://spacemy.herokuapp.com/logout"
+    
     @Published var authToken: String = ""
-
+    
     func login(regNumber: Int, password: String) {
         self.performRequest(identifier: regNumber, password: password, with: self.loginEndpoint, completion: { tokenData in
             DispatchQueue.main.sync {
@@ -34,7 +35,15 @@ final class AuthModel: ObservableObject {
             }
         })
     }
-
+    
+    func logout() {
+        self.performLogoutRequest(with: self.logoutEndpoint, completion: { response in
+            DispatchQueue.main.async {
+                //print(response)
+            }
+        })
+    }
+    
     func performRequest(identifier: Int, password: String, with urlString: String, completion: @escaping (Data) -> Void) {
         if let url = URL(string: urlString) {
             var request = URLRequest(url: url)
@@ -67,4 +76,29 @@ final class AuthModel: ObservableObject {
             }
         }
     }
-}
+    
+    func performLogoutRequest(with urlString: String, completion: @escaping (Data) -> Void) {
+        if let url = URL(string: urlString) {
+            var request = URLRequest(url: url)
+            
+            let token = UserDefaults().string(forKey: "authToken")
+            
+            request.setValue("Bearer \(token!)", forHTTPHeaderField: "Authorization")
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpMethod = "POST"
+                        
+            let session = URLSession(configuration: .default)
+            
+            let task = session.dataTask(with: request) { (data, response, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                if let safeData = data {
+                    completion(safeData)
+                }
+            }
+            
+            task.resume()
+        }
+    }}

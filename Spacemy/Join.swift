@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Join: View {
     @ObservedObject var eventsController = EventsModel()
-    
+        
     var body: some View {
         NavigationView {
             VStack {
@@ -19,8 +19,10 @@ struct Join: View {
                         GeometryReader { g -> Text in
                             
                             let frame = g.frame(in: CoordinateSpace.global)
-                            
+                            let generator = UINotificationFeedbackGenerator()
+                                                        
                             if frame.origin.y > 250 {
+                                generator.notificationOccurred(.error)
                                 self.eventsController.fetchEvents()
                                 return Text("Loading...")
                             }

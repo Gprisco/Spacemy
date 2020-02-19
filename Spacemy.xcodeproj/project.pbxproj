@@ -25,6 +25,7 @@
 		01828DBC23F1A01B00AB6925 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01828DBB23F1A01B00AB6925 /* Preview Assets.xcassets */; };
 		01828DBF23F1A01B00AB6925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01828DBD23F1A01B00AB6925 /* LaunchScreen.storyboard */; };
 		01F00AE923FDD4D400FB1EDE /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F00AE823FDD4D400FB1EDE /* Register.swift */; };
+		01F00AEB23FDDA5F00FB1EDE /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F00AEA23FDDA5F00FB1EDE /* Logout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		01828DBE23F1A01B00AB6925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01828DC023F1A01B00AB6925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01F00AE823FDD4D400FB1EDE /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		01F00AEA23FDDA5F00FB1EDE /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				01828DB623F1A01A00AB6925 /* ContentView.swift */,
 				01F00AE823FDD4D400FB1EDE /* Register.swift */,
 				0108BB5723FC7BC700DAF5D9 /* Login.swift */,
+				01F00AEA23FDDA5F00FB1EDE /* Logout.swift */,
 				0108BB5B23FD451C00DAF5D9 /* Home.swift */,
 				0108BB5D23FD467C00DAF5D9 /* Join.swift */,
 				0108BB5F23FD469700DAF5D9 /* Host.swift */,
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0108BB5823FC7BC700DAF5D9 /* Login.swift in Sources */,
+				01F00AEB23FDDA5F00FB1EDE /* Logout.swift in Sources */,
 				0108BB6023FD469700DAF5D9 /* Host.swift in Sources */,
 				01828DB023F1A01A00AB6925 /* AppDelegate.swift in Sources */,
 				0108BB5623FC50AD00DAF5D9 /* AuthModel.swift in Sources */,
