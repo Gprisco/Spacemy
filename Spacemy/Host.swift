@@ -13,14 +13,34 @@ struct Host: View {
     
     @State var title = ""
     @State var description = ""
-    @State var date = Date()
-    @State var category: Int = 0
+    @State var date = Date() {
+        willSet(newValue) {
+            print("\(newValue)")
+            self.collabsController.fetchCollabs(categoryId: self.category + 1, date: newValue, durationHour: Int(self.durationHour))
+        }
+    }
+    
+    @State var category: Int = 0 {
+        willSet(newValue) {
+            print("\(newValue)")
+
+            self.collabsController.fetchCollabs(categoryId: newValue + 1, date: self.date, durationHour: Int(self.durationHour))
+        }
+    }
+    
     @State var collab: Int = 0
-    @State var durationHour: Double = 1.0
+    
+    @State var durationHour: Double = 1.0 {
+        willSet(newValue) {
+            print("\(newValue)")
+
+            self.collabsController.fetchCollabs(categoryId: self.category + 1, date: self.date, durationHour: Int(newValue))
+        }
+    }
     
     let user = decode(jwtToken: UserDefaults().string(forKey: "authToken")!)
     
-    var categories: [Category] = [.meetAndShare, .notPrivate, .notPublic]
+    var categories: [Category] = [.meetAndShare, .notPublic, .notPrivate]
     
     var body: some View {
         NavigationView {
@@ -68,9 +88,7 @@ struct Host: View {
                 
                 Button(action: {
                     let event = CreateEvent(category_id: self.category + 1, duration_hour: Int(self.durationHour), name: self.title, creator_id: self.user["id"] as! Int, event_date: self.date, collab_id: self.collabsController.collabs[self.collab].id, description: self.description)
-                    
-                    print(event)
-                                        
+                                                            
                     EventsModel().createEvent(event: event)
                 }) {
                     HStack {
