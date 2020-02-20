@@ -87,7 +87,7 @@ struct Host: View {
                 }
                 
                 Button(action: {
-                    let event = CreateEvent(category_id: self.category + 1, duration_hour: Int(self.durationHour), name: self.title, creator_id: self.user["id"] as! Int, event_date: self.date, collab_id: self.collabsController.collabs[self.collab].id, description: self.description)
+                    let event = CreateEvent(category_id: self.category + 1, name: self.title, creator_id: self.user["id"] as! Int, event_date: self.date, collab_id: self.collabsController.collabs[self.collab].id, description: self.description, finish_date: Date(timeInterval: TimeInterval(3600 * Int(self.durationHour)), since: self.date))
                                                             
                     EventsModel().createEvent(event: event)
                 }) {

@@ -9,12 +9,13 @@
 import Foundation
 
 struct CreateEvent: Encodable {
-    let category_id, duration_hour: Int
+    let category_id: Int
     let name: String
     let creator_id: Int
     let event_date: Date
     let collab_id: Int
     let description: String
+    let finish_date: Date
 }
 
 final class EventsModel: ObservableObject {
@@ -26,6 +27,7 @@ final class EventsModel: ObservableObject {
     func fetchEvents() {
         self.performEventsRequest(with: self.eventsEndpoint, completion: { events in
             DispatchQueue.main.async {
+                print(events)
                 self.events = events
             }
         })

@@ -19,7 +19,7 @@ struct EventDetails: View {
                 VStack {
                     Text("Collab 0\(event.collab_id)").font(.title)
                     Text(event.description).font(.body)
-                    Text("\(event.event_date.dayMonth) at \(event.event_date.isoToTimeString)")
+                    Text("\(event.event_date.dayMonth) from \(event.event_date.isoToTimeString) to \(event.finish_date.isoToTimeString)")
                 }
             }
             
